@@ -1,0 +1,41 @@
+﻿@page "/login"
+
+@inject NavigationManager navManager
+
+<h2>Login Page</h2>
+<br />
+
+<div class="col-6 container">
+    <EditForm Model="Login" OnValidSubmit="HandleLogin">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label class="h6">User Name</label>
+            <InputText class="form-control" @bind-Value="Login.Username" />
+        </div>
+        <br/>
+        <div class="form-group">
+            <label class="h6">Password</label>
+            <InputText class="form-control" @bind-Value="Login.Password" type="password" />
+        </div>
+        <br />
+        <input type="submit" value="Login" class="btn btn-primary" />
+    </EditForm>
+</div>
+
+
+
+@code {
+    private LoginModel Login;
+
+    protected override void OnInitialized()
+    {
+        Login = new();
+    }
+
+    public void HandleLogin()
+    {
+        navManager.NavigateTo($"/login?user={Login.Username}&pwd={Login.Password}", true);
+    }
+}

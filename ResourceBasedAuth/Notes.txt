@@ -1,2 +1,0 @@
-﻿Resource Base Authentification:
-https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-6.0

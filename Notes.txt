@@ -1,12 +1,16 @@
-﻿Claims & Roles		: https://www.youtube.com/watch?v=cbtK3U2aOlg&ab_channel=RawCoding
+﻿Projects source:
+
+Claims & Roles		: https://www.youtube.com/watch?v=cbtK3U2aOlg&ab_channel=RawCoding
 					  https://github.com/T0shik/rolesvsclaimsvspolicy.git
 
 ResourceBasedAuth	: https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-5.0
 
 
-
 Authn : https://www.youtube.com/watch?v=BWa7Mu-oMHk&ab_channel=TonySpencer
 Authorization_Authentication_Test (same as Authn project but modified)
+
+
+FrankLiu : https://www.youtube.com/watch?v=3i0RcKrVyTo&list=PLgRlicSxjeMOxypAEL2XqIc2m_gPmoVN-&index=3&ab_channel=FrankLiu
 
 
 Authorization : Indetity (identify the user)

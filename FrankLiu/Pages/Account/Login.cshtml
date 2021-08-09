@@ -1,0 +1,17 @@
+﻿@page
+@model FrankLiu.Pages.Account.LoginModel
+
+
+<div class="container border col-6 p-5 mt-5">
+    <form method="post">
+
+        <label class="h6" asp-for="Credential.UserName"></label>
+        <input type="text" class="form-control" asp-for="Credential.UserName" />
+
+        <br />
+
+        <label class="h6" asp-for="Credential.Password"></label>
+        <input type="password" class="form-control" asp-for="Credential.Password" />
+
+    </form>
+</div>

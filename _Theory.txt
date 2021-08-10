@@ -1,0 +1,8 @@
+﻿FrankLiu: Ep7(2:50)
+
+-- app.UseAuthentication() -- 
+-> when the authentication middleware is looking at the HttpRequest, Httpcontext can see the Header that contains 
+the coockie, will decode the coockie and then populate the Security Context/ Claims Principals with values 
+translated from the cookies
+
+https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.iauthenticationservice?view=aspnetcore-5.0

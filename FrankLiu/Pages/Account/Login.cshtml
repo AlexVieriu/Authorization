@@ -4,14 +4,19 @@
 
 <div class="container border col-6 p-5 mt-5">
     <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
 
         <label class="h6" asp-for="Credential.UserName"></label>
         <input type="text" class="form-control" asp-for="Credential.UserName" />
+        <span class="text-danger" asp-validation-for="Credential.UserName"></span>
 
         <br />
-
         <label class="h6" asp-for="Credential.Password"></label>
         <input type="password" class="form-control" asp-for="Credential.Password" />
+        <span class="text-danger" asp-validation-for="Credential.Password"></span>
 
+        <br />
+        <input class="btn btn-primary" type ="submit" value="Login"/>
+        
     </form>
 </div>

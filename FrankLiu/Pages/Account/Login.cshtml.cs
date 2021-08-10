@@ -1,6 +1,11 @@
 using FrankLiu.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace FrankLiu.Pages.Account
 {
@@ -11,6 +16,33 @@ namespace FrankLiu.Pages.Account
 
         public void OnGet()
         {
+
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+                return Page();
+
+            // Verify the credential
+            if (Credential.UserName == "admin" && Credential.Password == "pwd")
+            {
+                // Creating the security context
+                var claims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.Name, "admin"),
+                    new Claim(ClaimTypes.Email, "admin@mywebsite.com")                
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, "CookieScheme");
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+               
+                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);
+
+                return RedirectToPage("/Index");
+            }
+
+            return Page();
         }
     }
 }

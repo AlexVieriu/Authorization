@@ -31,12 +31,15 @@ namespace FrankLiu.Pages.Account
                 var claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.Name, "admin"),
-                    new Claim(ClaimTypes.Email, "admin@mywebsite.com")                
+                    new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
+                    new Claim("Deparment", "HR"), 
+                    new Claim(ClaimTypes.Role, "Admin"),
+                    new Claim("Manager", "true")
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "CookieScheme");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-               
+
                 await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);
 
                 return RedirectToPage("/Index");

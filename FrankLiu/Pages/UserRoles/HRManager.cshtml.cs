@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FrankLiu.Pages.UserRoles
 {
-    [Authorize(Policy = "MustBelongToHRDeparment")]
-    public class HumanResourceModel : PageModel
+    [Authorize("HRManagerOnly")]
+    public class HRManagerModel : PageModel
     {
         public void OnGet()
         {

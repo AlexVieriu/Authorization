@@ -1,10 +1,9 @@
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Security.Claims;
 
 namespace FrankLiu
 {
@@ -28,6 +27,19 @@ namespace FrankLiu
                         options.Cookie.Name = "CookieName";
                         options.LoginPath = "/Account/Login";
                     });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly",
+                    policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
+
+                options.AddPolicy("MustBelongToHRDeparment",
+                    policy => policy.RequireClaim("Deparment", "HR"));
+
+                options.AddPolicy("HRManagerOnly",
+                    policy => policy.RequireClaim("Deparment", "HR")
+                                    .RequireClaim("Manager"));
+            });
 
         }
 

@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace FrankLiu.Pages.Account
 {
+  
     public class LoginModel : PageModel
     {
         [BindProperty]
         public Credential Credential { get; set; }
-
+           
         public void OnGet()
-        {
-
+        {     
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -34,13 +34,14 @@ namespace FrankLiu.Pages.Account
                     new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
                     new Claim("Deparment", "HR"), 
                     new Claim(ClaimTypes.Role, "Admin"),
-                    new Claim("Manager", "true")
+                    new Claim("Manager", "true"),
+                    new Claim("EmploymentDate", "2021-05-01")
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "CookieScheme");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);
+                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);                
 
                 return RedirectToPage("/Index");
             }

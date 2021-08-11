@@ -14,5 +14,6 @@ namespace FrankLiu.Models
         [DisplayName("Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
     }
 }

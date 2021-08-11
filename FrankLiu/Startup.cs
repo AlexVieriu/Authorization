@@ -1,3 +1,5 @@
+using FrankLiu.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -38,8 +40,11 @@ namespace FrankLiu
 
                 options.AddPolicy("HRManagerOnly",
                     policy => policy.RequireClaim("Deparment", "HR")
-                                    .RequireClaim("Manager"));
+                                    .RequireClaim("Manager")
+                                    .Requirements.Add(new HRManagerProbationRequirement(3)));
             });
+
+            services.AddSingleton<IAuthorizationHandler, HRManagerProbationRequirementHandler>();
 
         }
 

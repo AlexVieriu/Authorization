@@ -9,7 +9,7 @@ namespace FrankLiu.Authorization
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context,
                                                        HRManagerProbationRequirement requirement)
         {
-            if(!context.User.HasClaim(x => x.Type == "EmploymentDate"))
+            if (!context.User.HasClaim(x => x.Type == "EmploymentDate"))
             {
                 return Task.CompletedTask;
             }
@@ -17,7 +17,7 @@ namespace FrankLiu.Authorization
             var empdate = DateTime.Parse(context.User.FindFirst(x => x.Type == "EmploymentDate").Value);
             var period = DateTime.Now - empdate;
 
-            if(period.Days > 30* requirement.ProbationMonths)
+            if (period.Days > 30 * requirement.ProbationMonths)
                 context.Succeed(requirement);
 
             return Task.CompletedTask;

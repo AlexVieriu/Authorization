@@ -1,10 +1,5 @@
 using FrankLiu.Authorization;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
 
 namespace FrankLiu
@@ -28,6 +23,7 @@ namespace FrankLiu
                     {
                         options.Cookie.Name = "CookieName";
                         options.LoginPath = "/Account/Login";
+                        options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
                     });
 
             services.AddAuthorization(options =>

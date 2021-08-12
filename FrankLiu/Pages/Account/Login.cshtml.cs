@@ -1,15 +1,11 @@
 using FrankLiu.Models;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace FrankLiu.Pages.Account
 {
-  
     public class LoginModel : PageModel
     {
         [BindProperty]
@@ -41,7 +37,13 @@ namespace FrankLiu.Pages.Account
                 var claimsIdentity = new ClaimsIdentity(claims, "CookieScheme");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);                
+                // make the cookie last for the hole lifespan, even the browser is closed(2:00)
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = Credential.RememberMe
+                };
+
+                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal, authProperties);                
 
                 return RedirectToPage("/Index");
             }

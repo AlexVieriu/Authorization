@@ -1,4 +1,21 @@
-﻿FrankLiu: Ep7(2:50)
+﻿FrankLiu: 
+
+-- Ep1(2:50) --
+Authentication(): verify you are how you say you are(Login & Pass) & generate the security context
+Security Context: all your Identity info that is relevant to the facility
+
+
+Authorization() : verifying the security context satisfies the access requirements
+
+
+Ep2
+
+-> HttpRequest -> Verify Credentials -> get the credential from the database and put them into the claims
+-> Generating Security Context
+
+Cookie: -> it is stored in the Header of a HttpRequest/HttpResponse
+
+Ep7(2:50)
 
 -- app.UseAuthentication() -- 
 -> when the authentication middleware is looking at the HttpRequest, Httpcontext can see the Header that contains 
@@ -6,3 +23,4 @@ the coockie, will decode the coockie and then populate the Security Context/ Cla
 translated from the cookies
 
 https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.iauthenticationservice?view=aspnetcore-5.0
+

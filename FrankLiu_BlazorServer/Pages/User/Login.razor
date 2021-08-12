@@ -1,0 +1,47 @@
+﻿@page "/loginPage"
+
+@inject NavigationManager navManager
+
+<div class="h2 pt-3">Login Page</div>
+
+@if (credential == null)
+{
+	<div>Loading...</div>
+}
+else
+{
+	<div class="card col-4 p-5 container">
+		<EditForm Model="credential" OnValidSubmit="HandleLogin">
+			<DataAnnotationsValidator />
+			<ValidationSummary />
+
+			<div class="form-group">
+				<label class="h6">User Name</label>
+				<InputText class="form-control" @bind-Value=credential.Username />
+			</div>
+			<br>
+			<div class="form-group">
+				<label class="h6">Password</label>
+				<InputText class="form-control" @bind-Value=credential.Password type="password" />
+			</div>
+
+			<br>
+			<input type="submit" class="btn btn-primary" value="Login" />
+		</EditForm>
+	</div>
+}
+
+
+@code {
+	private Credential credential;
+
+	protected override void OnInitialized()
+	{
+		credential = new();
+	}
+
+	public void HandleLogin()
+	{
+		navManager.NavigateTo($"/login?username={credential.Username}&pwd={credential.Password}", true);
+	}
+}

@@ -35,7 +35,7 @@ namespace FrankLiu.Pages.Account
                     new Claim("Deparment", "HR"), 
                     new Claim(ClaimTypes.Role, "Admin"),
                     new Claim("Manager", "true"),
-                    new Claim("EmploymentDate", "2021-05-01")
+                    new Claim("EmploymentDate", "2022-01-01")
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "CookieScheme");

@@ -13,6 +13,5 @@ namespace FrankLiu_BlazorServer.Models
         [DisplayName("Password")]
         [DataType(DataType.Password)]
         public string? Password { get; set; }
-
     }
 }

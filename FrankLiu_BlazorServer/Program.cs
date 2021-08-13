@@ -1,3 +1,5 @@
+using System.Security.Claims;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,8 +9,15 @@ builder.Services.AddAuthentication("CookieScheme")
                 .AddCookie("CookieScheme", options =>
                 {
                     options.Cookie.Name = "CookieName";
-                    options.Cookie.Path = "/login";
+                    options.LoginPath = "/login";
                     options.AccessDeniedPath = "/loginDenied";
+                });
+
+builder.Services.AddAuthorization(options =>
+                {
+                    options.AddPolicy("HrManagerRole",
+                        policy => policy.RequireClaim("Manager", "HRManager")
+                                        .RequireClaim(ClaimTypes.Email, "HR@gmail.com"));
                 });
 
 var app = builder.Build();

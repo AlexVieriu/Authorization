@@ -12,12 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Links", "Links", "{D75EDD08
 		1_RoadMap.jpg = 1_RoadMap.jpg
 		2_Authorization_Authentification Flow..jpg = 2_Authorization_Authentification Flow..jpg
 		3_SecurityContext.jpg = 3_SecurityContext.jpg
+		4_Security.jpg = 4_Security.jpg
+		6_Token_Cookie.jpg = 6_Token_Cookie.jpg
+		7_Middleware.jpg = 7_Middleware.jpg
+		8_Authorization Architecture and Flow.jpg = 8_Authorization Architecture and Flow.jpg
 		_Notes.txt = _Notes.txt
 		_Theory.txt = _Theory.txt
-		Authorization Architecture and Flow.jpg = Authorization Architecture and Flow.jpg
-		Middleware.jpg = Middleware.jpg
-		Security.jpg = Security.jpg
-		Token_Cookie.jpg = Token_Cookie.jpg
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceBasedAuth", "ResourceBasedAuth\ResourceBasedAuth.csproj", "{08E29D7E-C86A-4AAE-AF1B-8D38C887AAD5}"
@@ -28,7 +28,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authn_Blazor", "Authn_Blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrankLiu", "FrankLiu\FrankLiu.csproj", "{1598FA5B-D875-4117-810C-CCE4374DB681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankLiu_BlazorServer", "FrankLiu_BlazorServer\FrankLiu_BlazorServer.csproj", "{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrankLiu_BlazorServer", "FrankLiu_BlazorServer\FrankLiu_BlazorServer.csproj", "{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{790755E3-56A1-4D6E-8E59-1B69658EFE71}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

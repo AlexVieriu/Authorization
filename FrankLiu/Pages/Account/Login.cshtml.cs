@@ -43,7 +43,7 @@ namespace FrankLiu.Pages.Account
                     IsPersistent = Credential.RememberMe
                 };
 
-                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal, authProperties);                
+                await HttpContext.SignInAsync("CookieScheme", claimsPrincipal);  // , authProperties);                
 
                 return RedirectToPage("/Index");
             }

@@ -1,0 +1,16 @@
+﻿@page "/roleAuthorization"
+
+@attribute [Authorize(Roles = "HR")]
+
+@inject NavigationManager navManager
+
+
+@code
+{
+    string? exception = "";
+
+    protected override void OnInitialized()
+    {
+        navManager.NavigateTo("/roleAuth", true);
+    }
+}

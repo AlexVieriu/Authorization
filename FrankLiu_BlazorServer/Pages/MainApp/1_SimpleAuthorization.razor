@@ -1,0 +1,15 @@
+﻿@page "/simpleAuthorization"
+
+@attribute [Authorize]
+
+@inject NavigationManager navManager
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        navManager.NavigateTo("/simpleAuth", true);
+    }
+}
+

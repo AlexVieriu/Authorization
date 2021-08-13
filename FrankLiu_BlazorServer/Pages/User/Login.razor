@@ -2,7 +2,7 @@
 
 @inject NavigationManager navManager
 
-<div class="h2 pt-3">Login Page</div>
+<div class="h2 py-4">Login Page</div>
 
 @if (credential == null)
 {
@@ -10,7 +10,7 @@
 }
 else
 {
-	<div class="card col-4 p-5 container">
+	<div class="card col-lg-5 p-5 container">
 		<EditForm Model="credential" OnValidSubmit="HandleLogin">
 			<DataAnnotationsValidator />
 			<ValidationSummary />

@@ -23,7 +23,7 @@ namespace FrankLiu
                     {
                         options.Cookie.Name = "CookieName";
                         options.LoginPath = "/Account/Login";
-                        options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
+                        //options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
                     });
 
             services.AddAuthorization(options =>

@@ -1,3 +1,5 @@
+using FrankLiu_BlazorServer.Roles;
+using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,16 +11,24 @@ builder.Services.AddAuthentication("CookieScheme")
                 .AddCookie("CookieScheme", options =>
                 {
                     options.Cookie.Name = "CookieName";
-                    options.LoginPath = "/login";
+                    options.LoginPath = "/loginPage";
                     options.AccessDeniedPath = "/loginDenied";
+                    options.ExpireTimeSpan = TimeSpan.FromSeconds(3);
                 });
 
 builder.Services.AddAuthorization(options =>
                 {
                     options.AddPolicy("HrManagerRole",
                         policy => policy.RequireClaim("Manager", "HRManager")
-                                        .RequireClaim(ClaimTypes.Email, "HR@gmail.com"));
+                                        .RequireClaim(ClaimTypes.Email, "HR@gmail.com")
+                                        .RequireClaim("Manager", "HRManager"));
+
+                    options.AddPolicy("DirectorSucursala",
+                        policy => policy.Requirements.Add(new DirectorSucursala(30)));
                 });
+
+builder.Services.AddSingleton<IAuthorizationHandler, HandleDirectorSucursala>();
+
 
 var app = builder.Build();
 

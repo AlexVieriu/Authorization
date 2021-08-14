@@ -9,13 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RowCoding_Claims", "Claims\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Links", "Links", "{D75EDD08-69FD-40B0-BAD2-B31CFC2D0D62}"
 	ProjectSection(SolutionItems) = preProject
-		1_RoadMap.jpg = 1_RoadMap.jpg
-		2_Authorization_Authentification Flow..jpg = 2_Authorization_Authentification Flow..jpg
-		3_SecurityContext.jpg = 3_SecurityContext.jpg
-		4_Security.jpg = 4_Security.jpg
-		6_Token_Cookie.jpg = 6_Token_Cookie.jpg
-		7_Middleware.jpg = 7_Middleware.jpg
-		8_Authorization Architecture and Flow.jpg = 8_Authorization Architecture and Flow.jpg
 		_Notes.txt = _Notes.txt
 		_Theory.txt = _Theory.txt
 	EndProjectSection
@@ -33,6 +26,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{790755E3-56A1-4D6E-8E59-1B69658EFE71}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrankLiu_Pics", "FrankLiu_Pics", "{D27C6FD4-421C-4D8B-B9B0-90EB769F8B4B}"
+	ProjectSection(SolutionItems) = preProject
+		1_RoadMap.jpg = 1_RoadMap.jpg
+		2_Authorization_Authentification Flow..jpg = 2_Authorization_Authentification Flow..jpg
+		3_SecurityContext.jpg = 3_SecurityContext.jpg
+		4_Security.jpg = 4_Security.jpg
+		6_Token_Cookie.jpg = 6_Token_Cookie.jpg
+		7_Middleware.jpg = 7_Middleware.jpg
+		8_Authorization Architecture and Flow.jpg = 8_Authorization Architecture and Flow.jpg
 	EndProjectSection
 EndProject
 Global
@@ -72,6 +76,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D27C6FD4-421C-4D8B-B9B0-90EB769F8B4B} = {D75EDD08-69FD-40B0-BAD2-B31CFC2D0D62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BE929FA-2A63-4299-85CD-5706DE01C337}

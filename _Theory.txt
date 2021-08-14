@@ -24,3 +24,26 @@ translated from the cookies
 
 https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.iauthenticationservice?view=aspnetcore-5.0
 
+
+--- Theory ---
+
+Authorization : Indetity (identify the user)
+Authorization : Grand permision to the User
+
+
+Implement services.AddAuthentication:
+https://stackoverflow.com/questions/52708364/net-core-isauthenticated-false-even-if-i-use-manually-httpcontext-signinasync/52710107#52710107
+
+
+Token vs Cookie: 
+https://stackoverflow.com/questions/37582444/jwt-vs-cookies-for-token-based-authentication#:~:text=One%20difference%20is%20that%20cookies%20are%20for%20sending,That%20data%20is%20often%20encoded%20as%20a%20JWT.
+-> the biggest difference between bearer tokens and cookies is that the browser will automatically send cookies, 
+where bearer tokens need to be added explicitly to the HTTP request.
+
+
+Token vs Cookie: 
+-> https://www.youtube.com/watch?v=UBUNrFtufWo&ab_channel=Fireship
+
+
+Authentication on the Web (Sessions, Cookies, JWT, localStorage, and more)
+-> https://www.youtube.com/watch?v=2PPSXonhIck&ab_channel=CodeRealm

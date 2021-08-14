@@ -19,10 +19,17 @@ else
 				<label class="h6">User Name</label>
 				<InputText class="form-control" @bind-Value=credential.Username />
 			</div>
+
 			<br>
 			<div class="form-group">
 				<label class="h6">Password</label>
 				<InputText class="form-control" @bind-Value=credential.Password type="password" />
+			</div>
+
+			<br>
+			<div class="form-group">
+				<input class="form-check-input" type="checkbox" @bind-value="credential.RememberMe"/>
+				<label>Remember Me</label>
 			</div>
 
 			<br>
@@ -42,6 +49,6 @@ else
 
 	public void HandleLogin()
 	{
-		navManager.NavigateTo($"/login?username={credential.Username}&pwd={credential.Password}", true);
+		navManager.NavigateTo($"/login?username={credential.Username}&pwd={credential.Password}&persistCookie={credential.RememberMe}", true);
 	}
 }

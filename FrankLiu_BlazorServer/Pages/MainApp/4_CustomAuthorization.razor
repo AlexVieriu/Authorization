@@ -1,0 +1,13 @@
+﻿@page "/customAuthorization"
+
+@*@attribute [Authorize(Roles = "HrManagerRole")]*@
+
+@inject NavigationManager navManager
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        navManager.NavigateTo("/customAuth", true);
+    }
+}

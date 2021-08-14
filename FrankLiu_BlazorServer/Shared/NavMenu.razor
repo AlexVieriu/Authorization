@@ -1,50 +1,72 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">FrankLiu_BlazorServer</a>
-    <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+	<a class="navbar-brand" href="">FrankLiu_BlazorServer</a>
+	<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/loginPage">
-                <span class="oi oi-plus" aria-hidden="true"></span> Login
-            </NavLink>
-        </div>
+	<nav class="flex-column">
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/simpleauthorization">
-                <span class="oi oi-plus" aria-hidden="true"></span> Simple Authorization
-            </NavLink>
-        </div>
+		<AuthorizeView>
+			<NotAuthorized>
+				<div class="nav-item px-3">
+					<NavLink class="nav-link" href="/loginPage">
+						<span class="oi oi-plus" aria-hidden="true"></span> Login
+					</NavLink>
+				</div>
+			</NotAuthorized>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/roleAuthorization">
-                <span class="oi oi-plus" aria-hidden="true"></span> Role Authorization
-            </NavLink>
-        </div>
+			<Authorized>
+				<div class="nav-item px-3">
+					<NavLink class="nav-link" href="/">
+						<span>
+							@context.User.Identity.Name
+						</span>
+					</NavLink>
+				</div>
+				<div class="nav-item px-3">
+					<NavLink class="nav-link" href="/logout">
+						<span class="oi oi-plus" aria-hidden="true"></span> Logout
+					</NavLink>
+				</div>
+			</Authorized>
+		</AuthorizeView>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/policyAuthorization">
-                <span class="oi oi-plus" aria-hidden="true"></span> Policy Authorization
-            </NavLink>
-        </div>
-    </nav>
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/simpleauthorization">
+				<span class="oi oi-plus" aria-hidden="true"></span> Simple Authorization
+			</NavLink>
+		</div>		
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/roleAuthorization">
+				<span class="oi oi-plus" aria-hidden="true"></span> Role Authorization
+			</NavLink>
+		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/policyAuthorization">
+				<span class="oi oi-plus" aria-hidden="true"></span> Policy Authorization
+			</NavLink>
+		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/customAuthorization">
+				<span class="oi oi-plus" aria-hidden="true"></span> Custom Authorization
+			</NavLink>
+		</div>
+
+	</nav>
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
+	private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+	private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+	private void ToggleNavMenu()
+	{
+		collapseNavMenu = !collapseNavMenu;
+	}
 }

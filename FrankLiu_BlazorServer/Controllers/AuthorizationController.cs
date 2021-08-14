@@ -20,10 +20,16 @@ public class AuthorizationController : ControllerBase
     }
 
     [Route("/policyAuth")]
-    [Authorize(Roles = "HR")]
+    [Authorize(Policy = "HrManagerRole")]
     public async Task<IActionResult> PolicyAuthorization()
     {
         return Ok("Policy Authorization");
     }
 
+    [Route("/customAuth")]
+    [Authorize(Policy = "DirectorSucursala")]
+    public async Task<IActionResult> CustomAuthorization()
+    {
+        return Ok("Custom Authorization");
+    }
 }

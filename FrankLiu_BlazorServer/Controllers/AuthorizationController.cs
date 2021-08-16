@@ -8,7 +8,7 @@ public class AuthorizationController : ControllerBase
     [Route("/simpleAuth")]
     [Authorize]
     public async Task<IActionResult> SimpleAuthorization()
-    {
+    {       
         return Ok("SimpleAuthorization");
     }
 

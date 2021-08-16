@@ -3,11 +3,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace Authn.Controllers
 {
@@ -51,7 +48,7 @@ namespace Authn.Controllers
                     new Claim(ClaimTypes.Name, "Bob Edward Jones")
                 };
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);                
                 await HttpContext.SignInAsync(claimsPrincipal);
 
                 return Redirect(returnUrl);

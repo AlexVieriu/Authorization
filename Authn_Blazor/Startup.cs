@@ -1,12 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace Authn_Blazor
 {
@@ -45,7 +38,6 @@ namespace Authn_Blazor
                                         claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
                                     }
                                 }
-
                                 await Task.CompletedTask;
                             },
 
@@ -60,7 +52,6 @@ namespace Authn_Blazor
                             }
                         };
                     });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

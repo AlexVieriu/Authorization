@@ -2,7 +2,7 @@
 
 namespace FrankLiu_BlazorServer.Roles
 {
-    public class HandleDirectorSucursala : AuthorizationHandler<DirectorSucursala>
+    public class DirectorSucursalaHandler : AuthorizationHandler<DirectorSucursala>
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context,
                                                        DirectorSucursala requirement)

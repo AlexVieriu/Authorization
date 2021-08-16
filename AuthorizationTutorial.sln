@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Links", "Links", "{D75EDD08
 	ProjectSection(SolutionItems) = preProject
 		_Notes.txt = _Notes.txt
 		_Theory.txt = _Theory.txt
+		Authn_Part2.txt = Authn_Part2.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceBasedAuth", "ResourceBasedAuth\ResourceBasedAuth.csproj", "{08E29D7E-C86A-4AAE-AF1B-8D38C887AAD5}"
@@ -38,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrankLiu_Pics", "FrankLiu_P
 		7_Middleware.jpg = 7_Middleware.jpg
 		8_Authorization Architecture and Flow.jpg = 8_Authorization Architecture and Flow.jpg
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authn_Part2", "Authn_Part2\Authn_Part2.csproj", "{E90FDF9F-7A59-4495-9831-DD018B0DF1F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +76,10 @@ Global
 		{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90FDF9F-7A59-4495-9831-DD018B0DF1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90FDF9F-7A59-4495-9831-DD018B0DF1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90FDF9F-7A59-4495-9831-DD018B0DF1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90FDF9F-7A59-4495-9831-DD018B0DF1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

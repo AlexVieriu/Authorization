@@ -1,0 +1,23 @@
+Authn_part1 is not good enough for a real app because:
+-> one way encryption/hasing password in the database
+-> password change/reset options
+-> recovery options
+-> multifactor auth options - SMS and biometric security
+
+
+Identity Providers
+-> Google
+-> Facebook
+-> Twitter
+-> Microsoft
+-> Github
+
+Commercial Providers: 
+-> Auth0
+-> Okta
+-> Azure AD
+
+Use external Identity Provider:
+-> SAML authentification
+-> OAuth 2.0
+-> OpenIDConnect(extention of OAuth 2.0)

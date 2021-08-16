@@ -27,7 +27,7 @@ builder.Services.AddAuthorization(options =>
                         policy => policy.Requirements.Add(new DirectorSucursala(30)));
                 });
 
-builder.Services.AddSingleton<IAuthorizationHandler, HandleDirectorSucursala>();
+builder.Services.AddSingleton<IAuthorizationHandler, DirectorSucursalaHandler>();
 
 
 var app = builder.Build();

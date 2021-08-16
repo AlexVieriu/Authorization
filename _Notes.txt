@@ -1,7 +1,12 @@
 ﻿Projects source:
 
-Authn : https://www.youtube.com/watch?v=BWa7Mu-oMHk&ab_channel=TonySpencer
-Authn_Blazor (same as Authn project but modified)
+Authn		: https://www.youtube.com/watch?v=BWa7Mu-oMHk&ab_channel=TonySpencer
+Authn_Part2	: https://www.youtube.com/watch?v=K0Z7GTOvbMo&t=1076s&ab_channel=TonySpencer
+Authn_Part3	: https://www.youtube.com/watch?v=Cej_u3fb9rI&t=3s&ab_channel=TonySpencer
+
+Authn_Blazor		(same as Authn project but modified)
+Authn_Part2_Blazor	(same as Authn_Part2 project but modified)
+Authn_Part3_Blazor	(same as Authn_Part3 project but modified)
 
 
 FrankLiu : https://www.youtube.com/watch?v=3i0RcKrVyTo&list=PLgRlicSxjeMOxypAEL2XqIc2m_gPmoVN-&index=3&ab_channel=FrankLiu

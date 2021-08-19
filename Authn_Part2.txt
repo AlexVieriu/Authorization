@@ -21,3 +21,7 @@ Use external Identity Provider:
 -> SAML authentification
 -> OAuth 2.0
 -> OpenIDConnect(extention of OAuth 2.0)
+
+
+1. Congifure Google API
+https://console.cloud.google.com/apis/dashboard?project=authsample-323306&supportedpurview=project

@@ -1,29 +1,21 @@
+
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Google;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication(options =>
-                {
-                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-                })
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
-                    options.LoginPath = "/login";
-                    options.AccessDeniedPath = "/denied";
+                    options.LoginPath = "/account/google-login";
                 })
                 .AddGoogle(options =>
-                {
-                    options.ClientId = "1096733216282-m8o4abett9p5a970gstirqd8inm6uted.apps.googleusercontent.com";
-                    options.ClientSecret = "MRUYZca3klHFQDD55zm0WKO1";
-                })
-                //.AddMicrosoftAccount()
-                //.AddFacebook()
-                //.AddGitHub()
-                ;    
+                 {
+                     options.ClientId = "777204174677-qj64dvtp3cdgt5n1q4l2rebtvneae6bd.apps.googleusercontent.com";
+                     options.ClientSecret = "4zM0nuaK_5naSXAEFruV18Qo";
+                 });
+
 
 var app = builder.Build();
 
@@ -44,7 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,0 +1,12 @@
+﻿<h3>This is top secret</h3>
+<h5>Welcome @User.Identity.Name</h5>
+
+<ul>
+    @foreach(var c in User.Claims)
+    {
+        <li>@c.Type: @c.Value</li>
+    }
+</ul>
+
+
+

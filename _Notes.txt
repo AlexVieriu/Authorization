@@ -19,6 +19,7 @@ Claims & Roles		: https://www.youtube.com/watch?v=cbtK3U2aOlg&ab_channel=RawCodi
 					  https://github.com/T0shik/rolesvsclaimsvspolicy.git
 
 
+GoogleAuthentification: https://www.youtube.com/watch?v=6nQf76HF20A&t=103s&ab_channel=RoundTheCode
 
 
 

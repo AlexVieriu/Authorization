@@ -1,0 +1,4 @@
+﻿Bugs:
+-> the "/auth" page is not created in the project, and is not a default path for a google page 
+that will be redirected
+-> 

@@ -5,25 +5,27 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication(options =>
-                {
-                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-                })
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/login";
-                    options.AccessDeniedPath = "/denied";
-                })
-                .AddGoogle(options =>
-                {
-                    options.ClientId = "1096733216282-m8o4abett9p5a970gstirqd8inm6uted.apps.googleusercontent.com";
-                    options.ClientSecret = "MRUYZca3klHFQDD55zm0WKO1";
-                })
-                //.AddMicrosoftAccount()
-                //.AddFacebook()
-                //.AddGitHub()
-                ;    
+builder.Services
+    .AddAuthentication(options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    })
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/login";
+        options.AccessDeniedPath = "/denied";        
+    })
+    .AddGoogle(options =>
+    {
+        options.ClientId = "1096733216282-m8o4abett9p5a970gstirqd8inm6uted.apps.googleusercontent.com";
+        options.ClientSecret = "MRUYZca3klHFQDD55zm0WKO1";
+        options.CallbackPath = "/auth";
+    })
+    //.AddMicrosoftAccount()
+    //.AddFacebook()
+    //.AddGitHub()
+    ;    
 
 var app = builder.Build();
 

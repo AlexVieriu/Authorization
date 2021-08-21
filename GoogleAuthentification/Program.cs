@@ -5,16 +5,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/account/google-login";
-                })
-                .AddGoogle(options =>
-                 {
-                     options.ClientId = "777204174677-qj64dvtp3cdgt5n1q4l2rebtvneae6bd.apps.googleusercontent.com";
-                     options.ClientSecret = "4zM0nuaK_5naSXAEFruV18Qo";
-                 });
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/account/google-login";
+    })
+    .AddGoogle(options =>
+        {
+            options.ClientId = "777204174677-qj64dvtp3cdgt5n1q4l2rebtvneae6bd.apps.googleusercontent.com";
+            options.ClientSecret = "4zM0nuaK_5naSXAEFruV18Qo";
+        });
 
 
 var app = builder.Build();

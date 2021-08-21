@@ -1,22 +1,22 @@
-
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services
-    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+builder.Services.AddAuthentication(options => 
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
     .AddCookie(options =>
     {
-        options.LoginPath = "/account/google-login";
+        options.LoginPath = "/account/facebook-login";
     })
-    .AddGoogle(options =>
+    .AddFacebook(options =>
     {
-        options.ClientId = "777204174677-qj64dvtp3cdgt5n1q4l2rebtvneae6bd.apps.googleusercontent.com";
-        options.ClientSecret = "4zM0nuaK_5naSXAEFruV18Qo";
+        options.AppId = "528480814921330";
+        options.AppSecret = "2319583eb700d1644a7287d62e7e0e09";
     });
-
 
 var app = builder.Build();
 

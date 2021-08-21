@@ -2,7 +2,7 @@
 
 Authn		: https://www.youtube.com/watch?v=BWa7Mu-oMHk&ab_channel=TonySpencer
 Authn_Part2	: https://www.youtube.com/watch?v=K0Z7GTOvbMo&t=1076s&ab_channel=TonySpencer (not working with because we can't find "/auth")
-Authn_Part3	: https://www.youtube.com/watch?v=Cej_u3fb9rI&t=3s&ab_channel=TonySpencer
+Authn_Part3	: https://www.youtube.com/watch?v=Cej_u3fb9rI&t=3s&ab_channel=TonySpencer (not working)
 
 Authn_Blazor		(same as Authn project but modified)
 Authn_Part3_Blazor	(same as Authn_Part3 project but modified)
@@ -18,8 +18,8 @@ Claims & Roles		: https://www.youtube.com/watch?v=cbtK3U2aOlg&ab_channel=RawCodi
 					  https://github.com/T0shik/rolesvsclaimsvspolicy.git
 
 
-GoogleAuthentification: https://www.youtube.com/watch?v=6nQf76HF20A&t=103s&ab_channel=RoundTheCode
-
+Authentification_Google		: https://www.youtube.com/watch?v=6nQf76HF20A&t=103s&ab_channel=RoundTheCode
+Authentification_Facebook	: https://www.youtube.com/watch?v=xzcDoUPy8Mk&t=14s&ab_channel=RoundTheCode
 
 
 

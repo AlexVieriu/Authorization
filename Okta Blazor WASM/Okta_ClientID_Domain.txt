@@ -1,0 +1,4 @@
+﻿Client ID	: 0oa1jv0pq2k3VYBig5d7
+Okta domain	: dev-71421169.okta.com
+
+My Okta password:	tYtMeB._Cz5Q_x6

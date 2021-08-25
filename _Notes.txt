@@ -1,5 +1,8 @@
 ﻿Projects source:
 
+Authentification_Google		: https://www.youtube.com/watch?v=6nQf76HF20A&t=103s&ab_channel=RoundTheCode
+Authentification_Facebook	: https://www.youtube.com/watch?v=xzcDoUPy8Mk&t=14s&ab_channel=RoundTheCode
+
 Authn		: https://www.youtube.com/watch?v=BWa7Mu-oMHk&ab_channel=TonySpencer
 Authn_Part2	: https://www.youtube.com/watch?v=K0Z7GTOvbMo&t=1076s&ab_channel=TonySpencer (not working with because we can't find "/auth")
 Authn_Part3	: https://www.youtube.com/watch?v=Cej_u3fb9rI&t=3s&ab_channel=TonySpencer (not working)
@@ -11,15 +14,7 @@ Authn_Part3_Blazor	(same as Authn_Part3 project but modified)
 FrankLiu : https://www.youtube.com/watch?v=3i0RcKrVyTo&list=PLgRlicSxjeMOxypAEL2XqIc2m_gPmoVN-&index=3&ab_channel=FrankLiu
 
 
-ResourceBasedAuth	: https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-5.0
-
-
-Claims & Roles		: https://www.youtube.com/watch?v=cbtK3U2aOlg&ab_channel=RawCoding
-					  https://github.com/T0shik/rolesvsclaimsvspolicy.git
-
-
-Authentification_Google		: https://www.youtube.com/watch?v=6nQf76HF20A&t=103s&ab_channel=RoundTheCode
-Authentification_Facebook	: https://www.youtube.com/watch?v=xzcDoUPy8Mk&t=14s&ab_channel=RoundTheCode
+Okta Blazor WASM	: https://www.youtube.com/watch?v=qN1vSk8lPtU&ab_channel=OktaDev (SPA + Individual Authentification selected)
 
 
 

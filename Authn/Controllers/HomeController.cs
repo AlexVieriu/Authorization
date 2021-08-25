@@ -49,8 +49,8 @@ namespace Authn.Controllers
                 };
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);                
-                await HttpContext.SignInAsync(claimsPrincipal);
-
+                await HttpContext.SignInAsync(claimsPrincipal); 
+                
                 return Redirect(returnUrl);
             }
 

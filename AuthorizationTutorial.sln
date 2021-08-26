@@ -5,9 +5,10 @@ VisualStudioVersion = 17.0.31521.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Links", "Links", "{D75EDD08-69FD-40B0-BAD2-B31CFC2D0D62}"
 	ProjectSection(SolutionItems) = preProject
-		_Notes.txt = _Notes.txt
 		Authn_Part2.txt = Authn_Part2.txt
 		FrankLiu.txt = FrankLiu.txt
+		OAuth and OpenID Connect.txt = OAuth and OpenID Connect.txt
+		Projects_Links.txt = Projects_Links.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authn", "Authn\Authn.csproj", "{ED0677F3-3FEE-4786-BE8F-8D1EFBB57780}"
@@ -42,9 +43,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authn_Part3_NotWorking", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentification_Facebook", "Authentification_Facebook\Authentification_Facebook.csproj", "{CA8EF4CE-4A91-486B-B39D-F8D84638C6D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okta Blazor WASM", "Okta Blazor WASM\Okta Blazor WASM.csproj", "{E8E0DEF8-AF40-48D7-8266-39022CA117B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta Blazor WASM", "Okta Blazor WASM\Okta Blazor WASM.csproj", "{E8E0DEF8-AF40-48D7-8266-39022CA117B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimCorry WASM Authentification", "TimCorry WASM Authentification\TimCorry WASM Authentification.csproj", "{AE330709-982E-4948-850D-8CC4B5B8EF1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimCorry WASM Authentification", "TimCorry WASM Authentification\TimCorry WASM Authentification.csproj", "{AE330709-982E-4948-850D-8CC4B5B8EF1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth_OpenID Connect_pics", "OAuth_OpenID Connect_pics", "{8831A7AD-428E-4A0C-A59E-056430ABC03F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\OAuth flow.jpg = ..\..\..\Downloads\OAuth flow.jpg
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permission_Based", "Permission_Based\Permission_Based.csproj", "{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,12 +100,17 @@ Global
 		{AE330709-982E-4948-850D-8CC4B5B8EF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE330709-982E-4948-850D-8CC4B5B8EF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE330709-982E-4948-850D-8CC4B5B8EF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D27C6FD4-421C-4D8B-B9B0-90EB769F8B4B} = {D75EDD08-69FD-40B0-BAD2-B31CFC2D0D62}
+		{8831A7AD-428E-4A0C-A59E-056430ABC03F} = {D75EDD08-69FD-40B0-BAD2-B31CFC2D0D62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BE929FA-2A63-4299-85CD-5706DE01C337}

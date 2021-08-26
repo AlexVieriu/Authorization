@@ -17,6 +17,12 @@ FrankLiu : https://www.youtube.com/watch?v=3i0RcKrVyTo&list=PLgRlicSxjeMOxypAEL2
 Okta Blazor WASM	: https://www.youtube.com/watch?v=qN1vSk8lPtU&ab_channel=OktaDev (SPA + Individual Authentification selected)
 
 
+Permision-Based	: https://codewithmukesh.com/blog/permission-based-authorization-in-aspnet-core/
+
+
+TimCorry WASM Authentification : 
+https://www.youtube.com/watch?v=2c4p6RGtkps&t=1586s&ab_channel=IAmTimCorey
+
 
 
 

@@ -2,7 +2,7 @@
 using Permission_Based.Constants;
 
 namespace Permission_Based.Seeds;
-public class DefaultRoles
+public static class DefaultRoles
 {
     public static async Task SeedAsync(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
     {

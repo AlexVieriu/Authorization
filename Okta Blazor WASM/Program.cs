@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Okta_Blazor_WASM;
-
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 

@@ -1,4 +1,3 @@
-
 namespace GoogleAuthentification.Models;
 public class ErrorViewModel
 {

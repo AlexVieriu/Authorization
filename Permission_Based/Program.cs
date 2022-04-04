@@ -1,10 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Permission_Based.Data;
-using Permission_Based.Permission;
-using Permission_Based.Seeds;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

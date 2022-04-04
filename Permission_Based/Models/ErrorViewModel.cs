@@ -1,4 +1,3 @@
-
 namespace Permission_Based.Models;
 public class ErrorViewModel
 {

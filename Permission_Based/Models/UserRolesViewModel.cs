@@ -1,5 +1,4 @@
-﻿
-namespace Permission_Based.Models;
+﻿namespace Permission_Based.Models;
 
 public class ManageUserRolesViewModel
 {

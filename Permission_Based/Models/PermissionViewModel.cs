@@ -1,5 +1,4 @@
 ﻿namespace Permission_Based.Models;
-
 public class PermissionViewModel
 {
     public string RoleId { get; set; }

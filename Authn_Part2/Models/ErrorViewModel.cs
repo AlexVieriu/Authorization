@@ -1,4 +1,3 @@
-
 namespace Authn_Part2.Models;
 public class ErrorViewModel
 {

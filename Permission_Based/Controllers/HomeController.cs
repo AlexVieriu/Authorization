@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Permission_Based.Models;
-using System.Diagnostics;
-
-namespace Permission_Based.Controllers;
+﻿namespace Permission_Based.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

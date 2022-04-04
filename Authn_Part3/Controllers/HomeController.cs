@@ -1,12 +1,4 @@
-﻿using Authn_Part3.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using System.Security.Claims;
-
-namespace Authn_Part3.Controllers;
+﻿namespace Authn_Part3.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

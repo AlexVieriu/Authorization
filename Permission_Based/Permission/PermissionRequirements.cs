@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-
-namespace Permission_Based.Permission;
+﻿namespace Permission_Based.Permission;
 
 internal class PermissionRequirement : IAuthorizationRequirement
 {

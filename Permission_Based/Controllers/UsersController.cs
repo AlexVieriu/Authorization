@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
-namespace Permission_Based.Controllers;
+﻿namespace Permission_Based.Controllers;
 
 [Authorize]
 public class UsersController : Controller

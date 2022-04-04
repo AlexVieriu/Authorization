@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace FrankLiu_BlazorServer.Controllers;
+﻿namespace FrankLiu_BlazorServer.Controllers;
 
 public class AuthorizationController : ControllerBase
 {

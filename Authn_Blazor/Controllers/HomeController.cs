@@ -1,43 +1,38 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
+﻿namespace Authn_Blazor.Controller;
 
-namespace Authn_Blazor.Controller
+[Route("api/[controller]")]
+[ApiController]
+public class HomeController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HomeController : ControllerBase
+    [Route("/login")]
+    public async Task<IActionResult> Login([FromQuery] string user, [FromQuery] string pwd)
     {
-        [Route("/login")]
-        public async Task<IActionResult> Login([FromQuery] string user, [FromQuery] string pwd)
+        if(user == "ina" && pwd == "funduletz")
         {
-            if(user == "ina" && pwd == "funduletz")
+            var claims = new List<Claim>()
             {
-                var claims = new List<Claim>()
-                {
-                    new Claim("username", user),
-                    new Claim(ClaimTypes.NameIdentifier, user),
-                    new Claim(ClaimTypes.Name, "facutza mica")
-                };
+                new Claim("username", user),
+                new Claim(ClaimTypes.NameIdentifier, user),
+                new Claim(ClaimTypes.Name, "facutza mica")
+            };
 
-                var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-                await HttpContext.SignInAsync(claimsPrincipal);
+            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
+            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+            await HttpContext.SignInAsync(claimsPrincipal);
 
-                return Redirect("/secured");
-            }
-            else
-            {
-                return Unauthorized("The User or Password are incorrect");
-            }
-            
+            return Redirect("/secured");
         }
-
-        [Route("/logout")]
-        public async Task<IActionResult> Logout()
+        else
         {
-            await HttpContext.SignOutAsync();
-            return Redirect("/");
+            return Unauthorized("The User or Password are incorrect");
         }
+        
+    }
+
+    [Route("/logout")]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync();
+        return Redirect("/");
     }
 }

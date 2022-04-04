@@ -19,11 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrankLiu", "FrankLiu\FrankL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrankLiu_BlazorServer", "FrankLiu_BlazorServer\FrankLiu_BlazorServer.csproj", "{4DDF4F14-70AB-4DB8-8916-D14B4F7469C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{790755E3-56A1-4D6E-8E59-1B69658EFE71}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrankLiu_Pics", "FrankLiu_Pics", "{D27C6FD4-421C-4D8B-B9B0-90EB769F8B4B}"
 	ProjectSection(SolutionItems) = preProject
 		1_RoadMap.jpg = 1_RoadMap.jpg
@@ -52,7 +47,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth_OpenID Connect_pics",
 		..\..\..\Downloads\OAuth flow.jpg = ..\..\..\Downloads\OAuth flow.jpg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permission_Based", "Permission_Based\Permission_Based.csproj", "{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permission_Based", "Permission_Based\Permission_Based.csproj", "{9477F53B-9B3F-4A18-A400-E3ACFF235F4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D0F0A07-4DF5-4B19-BF6F-773949FF51C1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

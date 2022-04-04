@@ -1,12 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Facebook;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿namespace Authentification_Facebook.Controllers;
 
-namespace Authentification_Facebook.Controllers;
-
-[AllowAnonymous, Route("account}")]
+[AllowAnonymous, Route("{account}")]
 public class AccountController : Controller
 {
     [Route("facebook-login")]

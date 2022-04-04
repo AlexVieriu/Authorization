@@ -1,4 +1,3 @@
-
 namespace Authentification_Facebook.Models;
 public class ErrorViewModel
 {

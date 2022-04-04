@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace TimCorry_WASM_Authentification.Models;
 
-namespace TimCorry_WASM_Authentification.Models
+public class AuthenticationUserModel
 {
-    public class AuthenticationUserModel
-    {
-        [Required(ErrorMessage ="Email Address is required")]
-        public string Email { get; set; }
+    [Required(ErrorMessage ="Email Address is required")]
+    public string Email { get; set; }
 
-        [Required(ErrorMessage ="Password is required")]
-        public string Password { get; set; }
-    }
+    [Required(ErrorMessage ="Password is required")]
+    public string Password { get; set; }
 }

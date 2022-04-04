@@ -1,9 +1,4 @@
-﻿using GoogleAuthentification.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-
-namespace GoogleAuthentification.Controllers;
+﻿namespace GoogleAuthentification.Controllers;
 
 [Authorize]
 public class HomeController : Controller

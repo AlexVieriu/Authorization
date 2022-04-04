@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Permission_Based.Constants;
-using System.Security.Claims;
-
-namespace Permission_Based.Seeds;
+﻿namespace Permission_Based.Seeds;
 
 public static class DefaultUsers
 {

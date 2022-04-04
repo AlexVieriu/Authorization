@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Permission_Based.Controllers;
+﻿namespace Permission_Based.Controllers;
 public class ProductController : Controller
 {
     public IActionResult Index()

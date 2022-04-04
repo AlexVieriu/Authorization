@@ -1,9 +1,4 @@
-﻿using Authentification_Facebook.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-
-namespace Authentification_Facebook.Controllers;
+﻿namespace Authentification_Facebook.Controllers;
 
 public class HomeController : Controller
 {
@@ -13,7 +8,6 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
 
     public IActionResult Index()
     {

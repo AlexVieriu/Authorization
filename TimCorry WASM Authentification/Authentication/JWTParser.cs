@@ -1,7 +1,4 @@
-﻿using System.Security.Claims;
-using System.Text.Json;
-
-namespace TimCorry_WASM_Authentification.Authentication;
+﻿namespace TimCorry_WASM_Authentification.Authentication;
 public class JWTParser
 {
     public static IEnumerable<Claim> ParseClaimsFromJWT(string jwt)

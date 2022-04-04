@@ -1,62 +1,55 @@
-﻿using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
-using System.Net.Http.Headers;
-using System.Text.Json;
-using TimCorry_WASM_Authentification.Models;
+﻿namespace TimCorry_WASM_Authentification.Authentication;
 
-namespace TimCorry_WASM_Authentification.Authentication
+public class AuthenticationService : IAuthenticationService
 {
-    public class AuthenticationService : IAuthenticationService
+    private readonly HttpClient _client;
+    private readonly AuthenticationStateProvider _authStateProvider;
+    private readonly ILocalStorageService _localStorage;
+
+    public AuthenticationService(HttpClient client,
+                                 AuthenticationStateProvider authStateProvider,
+                                 ILocalStorageService localStorage)
     {
-        private readonly HttpClient _client;
-        private readonly AuthenticationStateProvider _authStateProvider;
-        private readonly ILocalStorageService _localStorage;
+        _client = client;
+        _authStateProvider = authStateProvider;
+        _localStorage = localStorage;
+    }
 
-        public AuthenticationService(HttpClient client,
-                                     AuthenticationStateProvider authStateProvider,
-                                     ILocalStorageService localStorage)
+    public async Task<AuthenticatedUserModel> Login(AuthenticationUserModel user)
+    {
+        var data = new FormUrlEncodedContent(new[]
         {
-            _client = client;
-            _authStateProvider = authStateProvider;
-            _localStorage = localStorage;
+            new KeyValuePair<string,string>("grant_type", "password"),
+            new KeyValuePair<string,string>("username", user.Email),
+            new KeyValuePair<string,string>("password", user.Password),
+        });
+
+        var authResult = await _client.PostAsync("https://localhost:5001/token", data);
+        var authContent = await authResult.Content.ReadAsStringAsync();
+
+        if (authResult.IsSuccessStatusCode == false)
+        {
+            return null;
         }
 
-        public async Task<AuthenticatedUserModel> Login(AuthenticationUserModel user)
-        {
-            var data = new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string,string>("grant_type", "password"),
-                new KeyValuePair<string,string>("username", user.Email),
-                new KeyValuePair<string,string>("password", user.Password),
-            });
+        var result = JsonSerializer.Deserialize<AuthenticatedUserModel>(
+            authContent,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            var authResult = await _client.PostAsync("https://localhost:5001/token", data);
-            var authContent = await authResult.Content.ReadAsStringAsync();
+        await _localStorage.SetItemAsync("authToken", result.Access_Token);
 
-            if (authResult.IsSuccessStatusCode == false)
-            {
-                return null;
-            }
+        ((AuthStateProvider)_authStateProvider).NotifyUserAuthentication(result.Access_Token);
 
-            var result = JsonSerializer.Deserialize<AuthenticatedUserModel>(
-                authContent,
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("berear", result.Access_Token);
 
-            await _localStorage.SetItemAsync("authToken", result.Access_Token);
+        return result;
+    }
 
-            ((AuthStateProvider)_authStateProvider).NotifyUserAuthentication(result.Access_Token);
-
-            _client.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("berear", result.Access_Token);
-
-            return result;
-        }
-
-        public async Task Logout(AuthenticationUserModel user)
-        {
-            await _localStorage.RemoveItemAsync("authToken");
-            ((AuthStateProvider)_authStateProvider).NotifyUserLogout();
-            _client.DefaultRequestHeaders.Authorization = null;
-        }
+    public async Task Logout(AuthenticationUserModel user)
+    {
+        await _localStorage.RemoveItemAsync("authToken");
+        ((AuthStateProvider)_authStateProvider).NotifyUserLogout();
+        _client.DefaultRequestHeaders.Authorization = null;
     }
 }

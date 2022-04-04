@@ -1,9 +1,3 @@
-using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using TimCorry_WASM_Authentification;
-using TimCorry_WASM_Authentification.Authentication;
-
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 

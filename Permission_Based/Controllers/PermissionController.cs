@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Permission_Based.Models;
-using Permission_Based.Seeds;
-
-namespace Permission_Based.Controllers;
+﻿namespace Permission_Based.Controllers;
 
 [Authorize(Roles = "SuperAdmin")]
 public class PermissionController : Controller

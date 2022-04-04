@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Permission_Based.Models;
-using System.Reflection;
-using System.Security.Claims;
-
-namespace Permission_Based.Helpers;
+﻿namespace Permission_Based.Helpers;
 
 public static class ClaimHelpers
 {

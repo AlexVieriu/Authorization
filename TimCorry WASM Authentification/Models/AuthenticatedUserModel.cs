@@ -1,8 +1,7 @@
-﻿namespace TimCorry_WASM_Authentification.Models
+﻿namespace TimCorry_WASM_Authentification.Models;
+
+public class AuthenticatedUserModel
 {
-    public class AuthenticatedUserModel
-    {
-        public string Access_Token { get; set; }
-        public string UserName { get; set; }
-    }
+    public string Access_Token { get; set; }
+    public string UserName { get; set; }
 }

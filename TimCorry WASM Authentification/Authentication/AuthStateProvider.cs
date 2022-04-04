@@ -1,9 +1,4 @@
-﻿using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
-using System.Net.Http.Headers;
-using System.Security.Claims;
-
-namespace TimCorry_WASM_Authentification.Authentication;
+﻿namespace TimCorry_WASM_Authentification.Authentication;
 public class AuthStateProvider : AuthenticationStateProvider
 {
     private readonly HttpClient _httpClient;

@@ -1,8 +1,9 @@
 ﻿namespace Authentification_Facebook.Controllers;
 
-[AllowAnonymous, Route("{account}")]
+[AllowAnonymous, Route("account")]
 public class AccountController : Controller
 {
+
     [Route("facebook-login")]
     public IActionResult FacebookLogin()
     {
